@@ -1,0 +1,26 @@
+﻿<Window x:Class="AntiTamper.InfoPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AntiTamper"
+        mc:Ignorable="d"
+        Title="InfoPage" Height="159" Width="359" ResizeMode="CanMinimize">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Style="{StaticResource labelStyle}">
+            AntiTamper 3.0
+        </Label>
+
+        <Label Grid.Row="1" Style="{StaticResource labelStyle}">
+            Rohde &amp; Schwarz
+        </Label>
+
+        <Button Height="0" Width="0"  IsCancel="True"></Button>
+
+    </Grid>
+</Window>

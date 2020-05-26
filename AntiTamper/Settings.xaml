@@ -1,0 +1,40 @@
+﻿<Window x:Class="AntiTamper.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AntiTamper"
+        mc:Ignorable="d"
+        Title="Settings" Height="180" Width="340" ResizeMode="CanMinimize">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Style="{StaticResource SettingLabel}">Log Directory</Label>
+        <Label Grid.Row="1" Style="{StaticResource SettingLabel}">Report Name</Label>
+        <Label Grid.Row="2" Style="{StaticResource SettingLabel}">Company</Label>
+        <Label Grid.Row="3" Style="{StaticResource SettingLabel}">Version</Label>
+
+        <TextBox Name="LogDirectoryText" Grid.Row="0" Grid.Column="1" Margin="2,2,5,2" IsReadOnly="True" Background="LightGray"></TextBox>
+        <TextBox x:Name="ReportNameText" Grid.Row="1" Grid.Column="1" Margin="2,2,5,2"></TextBox>
+        <TextBox x:Name="CompanyText" Grid.Row="2" Grid.Column="1" Margin="2,2,5,2"></TextBox>
+        <TextBox x:Name="VersionText" Grid.Row="3" Grid.Column="1" Margin="2,2,5,2"></TextBox>
+
+        <Button Grid.Row="4" Grid.Column="1" Height="20" Width="50" HorizontalAlignment="Right" Margin="0,0,75,0" Click="Set_Details" IsDefault="True">OK</Button>
+        <Button Grid.Row="4" Grid.Column="1" Height="20" Width="50" HorizontalAlignment="Right" Margin="0,0,10,0" Click="Exit" IsCancel="True">Cancel</Button>
+
+    </Grid>
+    
+</Window>
